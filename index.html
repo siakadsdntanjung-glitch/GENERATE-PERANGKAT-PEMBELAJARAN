@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GENERATE PERANGKAT AJAR</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap">
+<style>
+:root{--ink:#1c2541;--paper:#f4f6fa;--card:#fff;--line:#d5dbe8;--accent:#c98200;--accent-ink:#fff;--muted:#5b6482;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e6eaf7;--paper:#12172a;--card:#1b2140;--line:#2f3860;--accent:#f0b429;--accent-ink:#12172a;--muted:#a3adcf}}
+:root[data-theme="dark"]{--ink:#e6eaf7;--paper:#12172a;--card:#1b2140;--line:#2f3860;--accent:#f0b429;--accent-ink:#12172a;--muted:#a3adcf}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "Plus Jakarta Sans",system-ui,sans-serif}
+header{padding:28px 20px 8px;max-width:1240px;margin:auto}
+h1{margin:0;font-size:clamp(1.9rem,5vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+header p{margin:8px 0 0;color:var(--muted);max-width:62ch}
+main{max-width:1240px;margin:auto;padding:16px 20px 48px;display:grid;grid-template-columns:340px 1fr;gap:24px;align-items:start}
+@media(max-width:860px){main{grid-template-columns:1fr}}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+@media(max-width:860px){.side{position:static}}
+label{display:block;font-weight:600;font-size:.88rem;margin:14px 0 4px}label small{font-weight:400;color:var(--muted)}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+textarea{min-height:92px;resize:vertical}
+input:focus,textarea:focus,button:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+[hidden]{display:none!important}.side{position:sticky;top:12px}.side form{position:static}.authbox{max-width:420px;margin:24px auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}.authbox h2{margin:0 0 4px}.seg{display:flex;gap:6px;margin:10px 0}.seg button,.lnk{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:7px 12px;font:600 .85rem "Plus Jakarta Sans",sans-serif;cursor:pointer}.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.bar{max-width:1240px;margin:auto;padding:12px 20px 0;display:flex;gap:10px;justify-content:flex-end;align-items:center;font-size:.9rem}.hist{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:14px}.hist h3{margin:0 0 6px;font-size:1rem}.hist ul{list-style:none;margin:0;padding:0;max-height:260px;overflow:auto}.hist li{display:flex;gap:6px;margin:4px 0}.hist li.m{color:var(--muted);font-size:.88rem}.hist .o{flex:1;text-align:left;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:8px;padding:6px 10px;font:600 .88rem "Plus Jakarta Sans",sans-serif;cursor:pointer}.hist .o small{display:block;font-weight:400;color:var(--muted)}.hist .x{border:0;background:none;color:var(--muted);cursor:pointer;font-size:1rem}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.go{margin-top:20px;width:100%;padding:13px;border:0;border-radius:10px;background:var(--accent);color:var(--accent-ink);font:800 1rem "Plus Jakarta Sans",sans-serif;cursor:pointer}
+.go[disabled]{opacity:.6;cursor:wait}
+.msg{font-size:.88rem;margin-top:10px;min-height:1.2em;color:var(--muted)}.msg.e{color:#c0392b}
+.empty{border:2px dashed var(--line);border-radius:14px;padding:48px 24px;text-align:center;color:var(--muted)}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.tools button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:7px 12px;font:600 .85rem "Plus Jakarta Sans",sans-serif;cursor:pointer}
+.doc{background:#fff;color:#111;border:1px solid var(--line);padding:clamp(18px,4vw,48px);font:12pt/1.5 "Times New Roman",Times,serif;overflow-x:auto}
+.doc h2{font-size:14pt;margin:0 0 10px}.doc h3{font-size:12pt;margin:20px 0 6px}
+.doc .pb{break-before:page;page-break-before:always}.doc .cover{text-align:center;padding-top:60px}.doc .cover .band{background:#f00;color:#fff;font-weight:bold;font-size:16pt;padding:14px 8px;margin:14px 0 12px;line-height:1.5}.doc table.k,.doc table.k td,.doc table.mod>tbody>tr>td{border:0}.doc table.k td{padding:1px 4px}.doc table.mod{border:1px solid #000;margin:8px 0}.doc table.mod>tbody>tr>td{padding:4px 12px}.doc table.mod>tbody>tr>td.y{background:#ff0;font-weight:bold}.doc table.mod>tbody>tr>td.r{background:#f00;color:#fff;font-weight:bold}.doc .ttl{text-align:center;font-weight:bold;font-size:12pt;margin:0 0 10px}.doc .dm{margin:2px 0 2px 20px;text-indent:-16px}
+.doc ul,.doc ol{margin:4px 0 4px 1.4em;padding:0}.doc p{margin:5px 0}
+.doc table{width:100%;border-collapse:collapse;margin:8px 0;font-size:11pt}
+.doc th,.doc td{border:1px solid #000;padding:5px 7px;vertical-align:top;text-align:left}.doc th{background:#e6e6e6}
+.doc .w{height:60px}.doc table.sign,.doc table.sign td{border:0;text-align:center;margin-top:30px}
+input[type=checkbox]{width:auto}.chk{display:flex;gap:8px;align-items:center;font-weight:400;margin:6px 0}.tools button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}.doc .pmw table{font-size:7pt;table-layout:fixed;width:100%}.doc table.sign{break-inside:avoid;page-break-inside:avoid}.doc .pmw th,.doc .pmw td{padding:2px 1px;text-align:center}.doc .pmw td.l{text-align:left;padding:2px 4px}.admbox{max-width:1240px;margin:12px auto 0;padding:0 20px}.admbox .in{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}.ut{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:8px}.ut th,.ut td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:middle}.bd{padding:2px 9px;border-radius:99px;font-size:.75rem;font-weight:600;border:1px solid var(--line);white-space:nowrap}.ut .lnk{margin:2px 4px 2px 0}@media print{body{background:#fff}header,form,.tools,.empty,.msg{display:none!important}main{display:block;padding:0}.doc{border:0;padding:0}}
+</style>
+</head>
+<body>
+<header><h1>GENERATE PERANGKAT AJAR</h1>
+<p>Masuk, isi data, klik Generate, dan AI menyusun Modul Ajar lengkap serta Silabus, Program Tahunan (Prota), dan Program Semester (Promes). Pilih perangkat yang dibutuhkan.</p></header>
+<div class="bar" id="bar" hidden><span id="who"></span><button class="lnk" id="admbtn" type="button" hidden>Panel Admin</button><button class="lnk" id="out2" type="button">Keluar</button></div><section class="admbox" id="adm" hidden><div class="in"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0">Verifikasi akun pendaftar</h3><button class="lnk" id="urf" type="button">Muat ulang</button></div><div style="overflow-x:auto"><table class="ut"><thead><tr><th>Nama</th><th>Email</th><th>Daftar</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="ut"></tbody></table></div><div class="msg" id="umsg"></div></div></section><section class="authbox" id="gate" hidden><h2 id="gt"></h2><p id="gp" style="color:var(--muted)"></p><button class="lnk" id="gchk" type="button">Periksa status</button></section>
+<section class="authbox" id="auth" hidden>
+<h2>Masuk untuk memulai</h2><p style="color:var(--muted);margin:0">Modul yang Anda buat tersimpan di akun guru. Pendaftar pertama menjadi admin utama; akun berikutnya perlu disetujui admin sebelum dapat dipakai.</p>
+<div class="seg"><button type="button" id="tin" aria-pressed="true">Masuk</button><button type="button" id="tup" aria-pressed="false">Daftar</button></div>
+<form id="af" autocomplete="on" style="border:0;padding:0">
+<div id="nmw" hidden><label for="anama">Nama lengkap</label><input id="anama" autocomplete="name"></div>
+<label for="aemail">Email</label><input id="aemail" type="email" required autocomplete="email">
+<label for="apass">Kata sandi <small>(minimal 6 karakter)</small></label><input id="apass" type="password" required minlength="6" autocomplete="current-password">
+<button class="go" id="ago" type="submit">Masuk</button>
+<div class="msg" id="amsg" role="alert"></div><button class="lnk" id="areset" type="button">Lupa kata sandi?</button>
+</form></section>
+<main id="app" hidden>
+<div class="side"><form id="f" autocomplete="off">
+<label for="sekolah">Nama sekolah</label><input id="sekolah" required>
+<div class="row"><div><label for="tahun">Tahun pelajaran</label><input id="tahun" required placeholder="2026/2027"></div>
+<div><label for="kelas">Kelas / semester</label><input id="kelas" required placeholder="IV / Ganjil"></div></div>
+<label for="penyusun">Nama penyusun</label><input id="penyusun" required>
+<label for="nip">NIP</label><input id="nip" required inputmode="numeric">
+<label for="mapel">Mata pelajaran <small>(opsional)</small></label><input id="mapel" placeholder="Contoh: IPAS">
+<label for="materi">Materi <small>(untuk Modul Ajar)</small></label><input id="materi" placeholder="Contoh: Tumbuhan, Sumber Kehidupan di Bumi">
+<label for="cp">Capaian pembelajaran</label><textarea id="cp" required></textarea>
+<div class="row"><div><label for="jpw">JP per minggu <small>(Silabus/Prota/Promes)</small></label><input id="jpw" type="number" min="1" max="20" value="5"></div><div></div></div><label for="daftar">Daftar bab/materi setahun <small>(opsional, satu per baris)</small></label><textarea id="daftar" placeholder="Kosongkan agar AI menyusun dari capaian pembelajaran"></textarea><label>Perangkat yang dibuat</label><label class="chk"><input type="checkbox" id="j_modul" checked> Modul Ajar</label><label class="chk"><input type="checkbox" id="j_silabus" checked> Silabus</label><label class="chk"><input type="checkbox" id="j_prota" checked> Program Tahunan (Prota)</label><label class="chk"><input type="checkbox" id="j_promes" checked> Program Semester (Promes)</label><button class="go" id="go" type="submit">Generate perangkat ajar</button>
+<div class="msg" id="msg" role="status"></div>
+</form>
+<div class="hist"><h3>Riwayat modul</h3><ul id="hl"></ul></div></div>
+<section id="out"><div class="empty">Modul ajar Anda akan muncul di sini. Proses generate memakan waktu sekitar satu menit.</div></section>
+</main>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import {initializeAppCheck,ReCaptchaEnterpriseProvider,getToken} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app-check.js";
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,sendPasswordResetEmail,updateProfile} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+import {getFirestore,collection,addDoc,getDocs,getDoc,setDoc,updateDoc,writeBatch,deleteDoc,doc,query,orderBy,limit,serverTimestamp} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import {getAI,getGenerativeModel,GoogleAIBackend} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-ai.js";
+const firebaseConfig={apiKey:"AIzaSyD3-GPo9r33GnCSEsJ11gKN3LEHzljmY8E",authDomain:"pendidikan-bb558.firebaseapp.com",projectId:"pendidikan-bb558",storageBucket:"pendidikan-bb558.firebasestorage.app",messagingSenderId:"292876476982",appId:"1:292876476982:web:38be49a79609cc002aee97",measurementId:"G-GRLTFN8F4P"};
+const app=initializeApp(firebaseConfig);
+// Debug token untuk localhost: hapus tanda // pada baris di bawah, buka web, salin token dari Console browser, lalu daftarkan di Firebase > App Check > Manage debug tokens.
+// if(location.hostname==="localhost")self.FIREBASE_APPCHECK_DEBUG_TOKEN=true;
+const ac=initializeAppCheck(app,{provider:new ReCaptchaEnterpriseProvider("6Ld-vNYtAAAAAHv2pAPLXpgiE4d6MatsWu_ZFmPR"),isTokenAutoRefreshEnabled:true});
+const auth=getAuth(app),db=getFirestore(app);
+const MODELS=['gemini-3.8-flash','gemini-3.1-flash-lite','gemini-flash-latest'];
+const gai=getAI(app,{backend:new GoogleAIBackend()});
+const GC=n=>({responseMimeType:'application/json',maxOutputTokens:30000});
+const mk=n=>getGenerativeModel(gai,{model:n,generationConfig:GC(n)});
+const pick=j=>{const c=j&&j.candidates&&j.candidates[0];const ps=(c&&c.content&&c.content.parts)||[];const t=ps.filter(x=>!x.thought).map(x=>x.text||'').join('');if(!t.trim())throw new Error('Respons AI kosong ('+((c&&c.finishReason)||(j&&j.promptFeedback&&j.promptFeedback.blockReason)||'tanpa alasan')+').');return t};
+async function raw(n,p){const h={'Content-Type':'application/json','x-goog-api-key':firebaseConfig.apiKey};try{const t=await getToken(ac,false);h['X-Firebase-AppCheck']=t.token}catch(e){}const r=await fetch('https://firebasevertexai.googleapis.com/v1beta/projects/'+firebaseConfig.projectId+'/models/'+n+':generateContent',{method:'POST',headers:h,body:JSON.stringify({contents:[{role:'user',parts:[{text:p}]}],generationConfig:GC(n)})});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error((j.error&&j.error.message)||('HTTP '+r.status));return pick(j)}
+async function txt(n,p){try{const r=await mk(n).generateContent(p);return pick(r.response)}catch(e){if(/reading 'some'|kosong/i.test((e&&e.message)||''))return raw(n,p);throw e}}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function ai(p,wait){let last;const Q=/\b429\b|quota|rate limit|RESOURCE_EXHAUSTED/i,T=/\b(500|503)\b|high demand|overloaded|unavailable/i;
+ for(let pass=0;pass<2;pass++){let q=false;
+  for(const n of MODELS){for(let k=0;k<2;k++){
+   try{const t=await txt(n,p);try{return JSON.parse(t.replace(/```json|```/g,'').trim())}catch(pe){throw new Error('Respons AI terpotong atau bukan JSON valid.')}}
+   catch(e){last=e;const m=(e&&e.message)||'';
+    if(Q.test(m)){q=true;break}
+    if(T.test(m)&&k<1){await sleep(3000);continue}
+    if(T.test(m)||/404|not found|NOT_FOUND|kosong|terpotong/i.test(m))break;
+    throw e}}}
+  if(!q)break;
+  if(pass===0){if(wait)wait();await sleep(40000)}}
+ throw last}
+const $=id=>document.getElementById(id);
+const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const L=(a,t='ul')=>`<${t}>`+(a||[]).map(x=>`<li>${E(x)}</li>`).join('')+`</${t}>`;
+let D=null,html='',docs={},cur='';const LABELS={modul:'Modul Ajar',silabus:'Silabus',prota:'Prota',promes:'Promes'};const setChecks=j=>['modul','silabus','prota','promes'].forEach(k=>{$('j_'+k).checked=!j||j.includes(k)});
+const EMPTY=$('out').innerHTML;let U=null,mode='in';
+const AERR={'auth/invalid-credential':'Email atau kata sandi salah.','auth/wrong-password':'Email atau kata sandi salah.','auth/user-not-found':'Akun belum terdaftar. Pilih Daftar.','auth/email-already-in-use':'Email sudah terdaftar. Pilih Masuk.','auth/weak-password':'Kata sandi minimal 6 karakter.','auth/invalid-email':'Format email tidak valid.','auth/too-many-requests':'Terlalu banyak percobaan. Coba lagi nanti.','auth/operation-not-allowed':'Login Email/Password belum diaktifkan di Firebase Console.','auth/network-request-failed':'Koneksi internet bermasalah.'};
+const amsg=(t,ok)=>{$('amsg').className='msg'+(ok?'':' e');$('amsg').textContent=t};
+function setMode(m){mode=m;$('tin').setAttribute('aria-pressed',m==='in');$('tup').setAttribute('aria-pressed',m==='up');$('nmw').hidden=m==='in';$('ago').textContent=m==='in'?'Masuk':'Daftar akun';$('apass').autocomplete=m==='in'?'current-password':'new-password';amsg('',1)}
+$('tin').onclick=()=>setMode('in');$('tup').onclick=()=>setMode('up');
+$('af').onsubmit=async e=>{e.preventDefault();const em=$('aemail').value.trim(),pw=$('apass').value;$('ago').disabled=true;amsg('Memproses...',1);
+ try{if(mode==='in')await signInWithEmailAndPassword(auth,em,pw);else{pendingName=$('anama').value.trim();const c=await createUserWithEmailAndPassword(auth,em,pw);if(pendingName)await updateProfile(c.user,{displayName:pendingName})}amsg('',1)}
+ catch(x){amsg(AERR[x.code]||('Gagal: '+(x.code||x.message)))}$('ago').disabled=false};
+$('areset').onclick=async()=>{const em=$('aemail').value.trim();if(!em){amsg('Isi email dulu, lalu klik Lupa kata sandi.');return}try{await sendPasswordResetEmail(auth,em);amsg('Tautan reset dikirim ke email Anda.',1)}catch(x){amsg(AERR[x.code]||'Gagal mengirim tautan reset.')}};
+$('out2').onclick=()=>signOut(auth);
+let P=null,pendingName='';
+const STL={pending:'Menunggu',approved:'Disetujui',rejected:'Ditolak',blocked:'Dinonaktifkan'};
+const GT={pending:['Menunggu persetujuan admin','Akun Anda sudah terdaftar. Admin utama perlu menyetujui akun ini sebelum Anda dapat membuat perangkat ajar. Hubungi admin, lalu klik Periksa status.'],rejected:['Pendaftaran ditolak','Admin utama menolak pendaftaran akun ini. Hubungi admin jika ini keliru.'],blocked:['Akun dinonaktifkan','Akses akun ini dinonaktifkan oleh admin utama.']};
+async function ensureProfile(u){
+ const pr=doc(db,'profiles',u.uid),s0=await getDoc(pr);
+ if(s0.exists())return s0.data();
+ const base={uid:u.uid,email:u.email||'',nama:pendingName||u.displayName||u.email||'',created:serverTimestamp()},ad=doc(db,'config','admin');
+ const a=await getDoc(ad);
+ if(!a.exists()){try{const b=writeBatch(db);b.set(ad,{uid:u.uid,email:u.email||'',created:serverTimestamp()});b.set(pr,{...base,role:'admin',status:'approved'});await b.commit();return (await getDoc(pr)).data()}catch(e){}}
+ await setDoc(pr,{...base,role:'guru',status:'pending'});
+ return (await getDoc(pr)).data()}
+function route(){
+ const st=P&&P.status,ok=st==='approved',ad=ok&&P.role==='admin';
+ $('app').hidden=!ok;$('gate').hidden=ok;$('admbtn').hidden=!ad;if(!ad)$('adm').hidden=true;
+ $('who').textContent=(U.displayName||U.email||'')+(ad?' (Admin utama)':'');
+ if(ok){if(!$('penyusun').value)$('penyusun').value=U.displayName||(P&&P.nama)||'';loadHist();if(ad)loadUsers()}
+ else{const g=GT[st]||['Status akun tidak dikenali','Hubungi admin utama.'];$('gt').textContent=g[0];$('gp').textContent=g[1]}}
+async function loadUsers(){
+ const tb=$('ut');tb.innerHTML='<tr><td colspan="5">Memuat...</td></tr>';$('umsg').textContent='';
+ try{const sn=await getDocs(query(collection(db,'profiles'),orderBy('created','asc')));let n=0,h='';
+  sn.forEach(x=>{const v=x.data();if(v.status==='pending')n++;const dt=v.created&&v.created.toDate?v.created.toDate().toLocaleDateString('id-ID'):'';let ac='';
+   if(v.role==='admin')ac='<i>Admin utama</i>';else{
+    if(v.status!=='approved')ac+=`<button class="lnk" data-u="${E(x.id)}" data-s="approved">Setujui</button>`;
+    if(v.status==='pending')ac+=`<button class="lnk" data-u="${E(x.id)}" data-s="rejected">Tolak</button>`;
+    if(v.status==='approved')ac+=`<button class="lnk" data-u="${E(x.id)}" data-s="blocked">Nonaktifkan</button>`}
+   h+=`<tr><td>${E(v.nama)}</td><td>${E(v.email)}</td><td>${dt}</td><td><span class="bd">${E(STL[v.status]||v.status)}</span></td><td>${ac}</td></tr>`});
+  tb.innerHTML=h||'<tr><td colspan="5">Belum ada pendaftar.</td></tr>';
+  $('admbtn').textContent='Panel Admin'+(n?' ('+n+' menunggu)':'');
+  tb.querySelectorAll('button[data-u]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await updateDoc(doc(db,'profiles',b.dataset.u),{status:b.dataset.s,reviewed:serverTimestamp()})}catch(e){$('umsg').className='msg e';$('umsg').textContent='Gagal mengubah status. Periksa aturan Firestore.';b.disabled=false;return}loadUsers()})}
+ catch(e){tb.innerHTML='<tr><td colspan="5">Daftar tidak dapat dimuat. Periksa aturan Firestore.</td></tr>'}}
+$('admbtn').onclick=()=>{$('adm').hidden=!$('adm').hidden};$('urf').onclick=loadUsers;
+$('gchk').onclick=async()=>{if(!U)return;$('gchk').disabled=true;try{P=await ensureProfile(U);route()}catch(e){$('gp').textContent='Gagal memeriksa status. Coba lagi.'}$('gchk').disabled=false};
+onAuthStateChanged(auth,async u=>{U=u;P=null;
+ $('auth').hidden=!!u;$('bar').hidden=!u;$('app').hidden=true;$('gate').hidden=true;$('adm').hidden=true;$('admbtn').hidden=true;
+ if(!u){html='';docs={};D=null;$('out').innerHTML=EMPTY;$('hl').innerHTML='';return}
+ $('who').textContent=u.displayName||u.email||'';
+ try{P=await ensureProfile(u)}catch(e){$('gate').hidden=false;$('gt').textContent='Profil akun tidak dapat dimuat';$('gp').textContent='Periksa koneksi dan aturan Firestore, lalu klik Periksa status.';return}
+ route()});
+const col=()=>collection(db,'users',U.uid,'modul');
+const fill=d=>Object.keys(d).forEach(k=>{if($(k))$(k).value=d[k]});
+async function saveHist(d,dc){await addDoc(col(),{materi:d.materi||d.mapel||'Perangkat ajar',kelas:d.kelas,data:d,html:dc.modul||Object.values(dc)[0]||'',docs:dc,created:serverTimestamp()});loadHist()}
+async function loadHist(){const ul=$('hl');ul.innerHTML='<li class="m">Memuat...</li>';
+ try{const s=await getDocs(query(col(),orderBy('created','desc'),limit(30)));ul.innerHTML=s.empty?'<li class="m">Belum ada modul tersimpan.</li>':'';
+  s.forEach(x=>{const v=x.data(),li=document.createElement('li'),dt=v.created&&v.created.toDate?v.created.toDate().toLocaleDateString('id-ID'):'';
+   li.innerHTML='<button type="button" class="o">'+E(v.materi)+'<small>'+E(v.kelas)+' &bull; '+dt+'</small></button><button type="button" class="x" aria-label="Hapus modul">&times;</button>';
+   li.querySelector('.o').onclick=()=>{D=v.data;docs=v.docs||{modul:v.html};cur='';fill(v.data);setChecks(v.data.jenis);show();window.scrollTo({top:$('out').offsetTop-8})};
+   li.querySelector('.x').onclick=async()=>{if(confirm('Hapus modul ini dari riwayat?')){try{await deleteDoc(doc(col(),x.id));loadHist()}catch(e){}}};
+   ul.appendChild(li)})}
+ catch(e){ul.innerHTML='<li class="m">Riwayat tidak dapat dimuat. Periksa aturan Firestore.</li>'}}
+function prompts(d){
+ const ctx=`Data guru: sekolah=${d.sekolah}; tahun pelajaran=${d.tahun}; kelas/semester=${d.kelas}; mata pelajaran=${d.mapel||'(simpulkan dari materi)'}; materi=${d.materi}; capaian pembelajaran=${d.cp}.`;
+ const rule=`Tulis dalam Bahasa Indonesia untuk Kurikulum Merdeka, sesuai jenjang dan fase kelas, konkret, rinci, dan siap pakai, dengan gaya Buku Guru Kemendikbud (kalimat instruksi untuk guru, mis. "Ajak peserta didik...", "Tanyakan kepada..."). Balas HANYA JSON valid tanpa markdown.`;
+ const A=`${ctx}\n${rule}\nBuat bagian pertama Modul Ajar dengan skema:\n{"jenjang":"SD|SMP|SMA","jenjang_lengkap":"SEKOLAH DASAR (SD/MI)","mapel":"nama lengkap mata pelajaran","fase":"B","kelas_angka":"4","kelas_teks":"IV (Empat)","semester_teks":"I (Ganjil)","bab":"judul bab/materi","topik":["A. ...","B. ...","C. ..."],"alokasi":"mis. 12 JP","kompetensi_awal":["3 butir"],"profil":["dimensi profil pelajar Pancasila relevan"],"sarana":{"sumber":"sumber belajar (buku, internet, LKPD)","per_topik":[{"topik":"A. ...","siswa":["alat/bahan"],"guru":["alat/bahan"]}]},"target":["peserta didik reguler/tipikal: ...","peserta didik dengan pencapaian tinggi: ..."],"model":"mis. Pembelajaran Tatap Muka","tujuan":{"bab":["3 tujuan"],"topik":[{"judul":"Topik A","butir":["3 tujuan diawali 'Peserta didik ...'"]}]},"pemahaman":[{"topik":"Topik A. ...","teks":"1 kalimat"}],"pemantik":[{"judul":"Pengenalan Topik","soal":["2-3 pertanyaan"]}],"orientasi":["berdoa, presensi, dll"],"apersepsi":{"jp":"2 JP","langkah":["4-6 langkah rinci"]},"motivasi":["2-3 langkah"],"inti":[{"judul":"Pengajaran Topik A: ... (n JP)","langkah":["6-10 langkah rinci, termasuk literasi, diskusi, aktivitas"]}],"penutup":["3-5 langkah"]}\nBuat satu entri per topik (2-3 topik) pada semua array per-topik.`;
+ const B=`${ctx}\n${rule}\nBuat bagian kedua Modul Ajar (refleksi sampai daftar pustaka) dengan skema:\n{"refleksi":[{"topik":"Topik A: ...","tanya":[{"q":"...","a":"jawaban untuk guru"}]}],"rubrik":[{"judul":"Contoh Rubrik Penilaian Proyek","baris":[{"aspek":"Tahap 1","k4":"...","k3":"...","k2":"...","k1":"..."}]},{"judul":"Contoh Rubrik Penilaian Presentasi Produk","baris":[]}],"pengayaan":"...","remedial":"...","uji":[{"topik":"A. ...","soal":["..."],"kunci":["..."]}],"lkpd":{"judul":"...","tujuan":"...","petunjuk":["..."],"kegiatan":[{"judul":"...","instruksi":"...","pertanyaan":["..."]}],"tabel":{"kolom":["..",".."],"baris":3}},"bacaan":[{"topik":"Topik A: ...","isi":["paragraf akurat"]}],"glosarium":[{"istilah":"...","arti":"..."}],"pustaka":["Penulis. Tahun. Judul. Kota: Penerbit."]}\nBuat 3-4 pertanyaan refleksi per topik, 2 rubrik masing-masing 4-5 baris, 2-3 soal uji per topik beserta kunci, 1 LKPD (3 kegiatan), bahan bacaan tiap topik 3-5 paragraf, 8-12 istilah glosarium, 5-8 pustaka nyata.`;
+ return [A,B];
+}
+const LOGO="data:image/jpeg;base64,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";
+function build(d,A,B){
+ const dm=a=>(a||[]).map(x=>`<p class="dm">&#10070;&nbsp; ${E(x)}</p>`).join(''),bt=t=>`<p><b>${E(t)}</b></p>`;
+ const Y=t=>`<tr><td class="y" bgcolor="#FFFF00" style="background:#FFFF00;font-weight:bold">${t}</td></tr>`;
+ const R=t=>`<tr><td class="r" bgcolor="#FF0000" style="background:#FF0000;color:#FFFFFF;font-weight:bold"><font color="#FFFFFF">${t}</font></td></tr>`;
+ const C=h=>`<tr><td style="padding:4px 12px">${h}</td></tr>`;
+ const kv=(k,v)=>`<tr><td width="24%"><b>${E(k)}</b></td><td width="3%"><b>:</b></td><td><b>${v}</b></td></tr>`;
+ const kelas=`${E(A.kelas_teks||d.kelas)} / ${E(A.semester_teks||'')}`;
+ const tp=(A.topik||[]).map(E).join('<br>');
+ const cover=`<div class="cover"><img src="${LOGO}" width="110" alt="Logo" style="display:block;margin:0 auto"><div class="band" style="background:#FF0000;color:#FFFFFF;font-weight:bold;font-size:16pt;padding:12px"><font color="#FFFFFF">MODUL AJAR KURIKULUM MERDEKA</font></div><p><b>${E(A.jenjang_lengkap||'')}</b></p><br><table class="k" cellspacing="0" style="margin:auto;text-align:left">${kv('Nama penyusun',E(d.penyusun))}${kv('NIP',E(d.nip))}${kv('Nama Sekolah',E(d.sekolah))}${kv('Mata Pelajaran',E(A.mapel||d.mapel))}${kv('Fase, Kelas / Semester',`${E(A.fase)}, ${kelas}`)}</table><hr style="border:0;border-top:2px solid #000;margin-top:40px"></div>`;
+ const sar=((A.sarana||{}).per_topik||[]).map(x=>`<p><b>${E(x.topik)}</b></p>${x.siswa&&x.siswa.length?'<p><b>&#10070; Perlengkapan yang dibutuhkan peserta didik:</b></p>'+L(x.siswa,'ol'):''}${x.guru&&x.guru.length?'<p><b>&#10070; Perlengkapan yang dibutuhkan guru (opsional):</b></p>'+L(x.guru,'ol'):''}`).join('');
+ const tj=A.tujuan||{},tuj=`<p><b>&#10070; Tujuan Pembelajaran ${E(A.bab)} :</b></p>${L(tj.bab,'ol')}`+(tj.topik||[]).map(t=>`<p><b>&#10070; Tujuan Pembelajaran ${E(t.judul)} :</b></p>${L(t.butir,'ol')}`).join('');
+ const pem=(A.pemahaman||[]).map(x=>`<p><b>${E(x.topik)} :</b></p>${dm([x.teks])}`).join('');
+ const pan=(A.pemantik||[]).map(x=>`<p><b>${E(x.judul)}</b></p>${L(x.soal,'ol')}`).join('');
+ const ap=A.apersepsi||{},keg=`<p><b>Kegiatan Pendahuluan</b></p><p><b>Kegiatan Orientasi</b></p>${L(A.orientasi,'ol')}<p><b>Kegiatan Apersepsi (${E(ap.jp||'')})</b></p>${L(ap.langkah,'ol')}<p><b>Kegiatan Motivasi</b></p>${L(A.motivasi,'ol')}<p><b>Kegiatan Inti</b></p>`+(A.inti||[]).map(x=>`<p><b>${E(x.judul)}</b></p>${L(x.langkah,'ol')}`).join('')+`<p><b>Kegiatan Penutup</b></p>${L(A.penutup,'ol')}`;
+ const ref=(B.refleksi||[]).map(x=>`<p><b>${E(x.topik)}</b></p>`+(x.tanya||[]).map((q,i)=>`<p style="margin-bottom:0">${i+1}. ${E(q.q)}</p><p class="dm" style="color:#1f4e79"><i>${E(q.a)}</i></p>`).join('')).join('');
+ const rub=(B.rubrik||[]).map(r=>`<p><b>${E(r.judul)}</b></p><table><tr><th></th><th>Sangat Baik</th><th>Baik</th><th>Cukup</th><th>Perlu Perbaikan</th></tr>${(r.baris||[]).map(x=>`<tr><td><b>${E(x.aspek)}</b></td><td>${E(x.k4)}</td><td>${E(x.k3)}</td><td>${E(x.k2)}</td><td>${E(x.k1)}</td></tr>`).join('')}</table>`).join('');
+ const uji=(B.uji||[]).map(x=>`<p><b>${E(x.topik)}</b></p>${L(x.soal,'ol')}`).join('')+`<p><b>Kunci Jawaban</b></p>`+(B.uji||[]).map(x=>`<p><b>${E(x.topik)}</b></p>${L(x.kunci,'ol')}`).join('');
+ const lk=B.lkpd||{},tb=lk.tabel||{kolom:['No','Hasil'],baris:3};
+ const lkpd=`<p class="ttl">LEMBAR KERJA PESERTA DIDIK (LKPD) Lampiran 1.1</p><p><b>Nama : ..............................................</b><br><b>Kelas : ..............................................</b></p><p><b>${E(lk.judul)}</b></p><p>Tujuan: ${E(lk.tujuan)}</p><p><b>Petunjuk!</b></p>${L(lk.petunjuk,'ol')}${(lk.kegiatan||[]).map((k,i)=>`<p><b>Kegiatan ${i+1}: ${E(k.judul)}</b></p><p>${E(k.instruksi)}</p>${L(k.pertanyaan,'ol')}`).join('')}<table><tr>${(tb.kolom||[]).map(h=>`<th>${E(h)}</th>`).join('')}</tr>${Array.from({length:tb.baris||3},()=>`<tr>${(tb.kolom||[]).map(()=>'<td class="w"></td>').join('')}</tr>`).join('')}</table>`;
+ const bac=(B.bacaan||[]).map(x=>`<p><b>${E(x.topik)}</b></p><p><b>Bahan Bacaan Guru</b></p>${(x.isi||[]).map(p=>`<p>${E(p)}</p>`).join('')}`).join('');
+ const glo=(B.glosarium||[]).map(g=>`<p class="dm"><b>${E(g.istilah)}</b>: ${E(g.arti)}</p>`).join('');
+ return `${cover}<div class="pb"></div><p class="ttl">MODUL AJAR KURIKULUM MERDEKA<br>${E((A.mapel||d.mapel||'').toUpperCase())} ${E(A.jenjang)} KELAS ${E(A.kelas_angka||d.kelas)}</p>
+<table class="mod" cellspacing="0" cellpadding="4" width="100%" style="border-collapse:collapse;border:1px solid #000">
+${Y('INFORMASI UMUM')}${R('A.&nbsp; IDENTITAS MODUL')}${C(`<table class="k" cellspacing="0" width="100%">${kv('Penyusun',E(d.penyusun)+' (NIP. '+E(d.nip)+')')}${kv('Instansi',E(d.sekolah))}${kv('Tahun Penyusunan','Tahun '+E(d.tahun))}${kv('Jenjang Sekolah',E(A.jenjang))}${kv('Mata Pelajaran',E(A.mapel||d.mapel))}${kv('Fase / Kelas',E(A.fase)+' / '+E(A.kelas_angka||d.kelas))}${kv('Materi',E(A.bab))}${kv('Topik',tp)}${kv('Alokasi Waktu',E(A.alokasi))}</table>`)}
+${R('B.&nbsp; KOMPETENSI AWAL')}${C(dm(A.kompetensi_awal))}${R('C.&nbsp; PROFIL PELAJAR PANCASILA')}${C(L(A.profil,'ol'))}
+${R('D.&nbsp; SARANA DAN PRASARANA')}${C(`<p><b>&#10070; Sumber Belajar :</b> ${E((A.sarana||{}).sumber)}</p>${sar}`)}
+${R('E.&nbsp; TARGET PESERTA DIDIK')}${C(dm(A.target))}${R('F.&nbsp; MODEL PEMBELAJARAN')}${C(dm([A.model]))}
+${Y('KOMPONEN INTI')}${R('A.&nbsp; TUJUAN KEGIATAN PEMBELAJARAN')}${C(tuj)}${R('B.&nbsp; PEMAHAMAN BERMAKNA')}${C(pem)}${R('C.&nbsp; PERTANYAAN PEMANTIK')}${C(pan)}
+${R('D.&nbsp; KEGIATAN PEMBELAJARAN')}${C(keg)}${R('E.&nbsp; REFLEKSI')}${C(ref)}${R('F.&nbsp; ASESMEN / PENILAIAN')}${C(rub)}
+${R('G.&nbsp; KEGIATAN PENGAYAAN DAN REMEDIAL')}${C(`<p><b>Pengayaan</b></p><p>${E(B.pengayaan)}</p><p><b>Remedial</b></p><p>${E(B.remedial)}</p>`)}${R('H.&nbsp; UJI PEMAHAMAN')}${C(uji)}
+${Y('LAMPIRAN')}${R('A.&nbsp; LEMBAR KERJA PESERTA DIDIK')}${C(lkpd)}${R('B.&nbsp; BAHAN BACAAN GURU &amp; PESERTA DIDIK')}${C(bac)}${R('C.&nbsp; GLOSARIUM')}${C(glo)}${R('D.&nbsp; DAFTAR PUSTAKA')}${C(L(B.pustaka,'ol'))}
+</table>`;
+}
+
+const SEMN=s=>s===2?'II (Genap)':'I (Ganjil)';
+const semOf=d=>/genap|\/\s*(II|2)\s*$/i.test(d.kelas||'')?2:1;
+const ji=n=>{n=parseInt(n,10);return isNaN(n)?0:n};
+const arr=x=>Array.isArray(x)?x:(x?[x]:[]);
+const pnorm=P=>(P.unit||[]).map(u=>({...u,semester:ji(u.semester)===2?2:1,jp:ji(u.jp),tp:arr(u.tp)}));
+const kv2=(k,v)=>`<tr><td width="26%"><b>${E(k)}</b></td><td width="3%"><b>:</b></td><td>${v}</td></tr>`;
+const sigh=d=>`<table class="sign" width="100%"><tr><td align="center">Mengetahui,<br>Kepala Sekolah<br><br><br><br>(............................)<br>NIP. ..................</td><td align="center">Guru Mata Pelajaran<br><br><br><br><br><b><u>${E(d.penyusun)}</u></b><br>NIP. ${E(d.nip)}</td></tr></table>`;
+function headP(d,P,judul,withSem){const k=String(d.kelas||'').split('/')[0].trim();return `<p class="ttl">${judul}</p><table class="k" cellspacing="0" width="100%">${kv2('Satuan Pendidikan',E(d.sekolah))}${kv2('Mata Pelajaran',E(P.mapel||d.mapel))}${kv2('Fase / Kelas',E(P.fase||'-')+' / '+E(k))}${withSem?kv2('Semester',SEMN(semOf(d))):''}${kv2('Tahun Pelajaran',E(d.tahun))}</table><br>`}
+function promptC(d){const s=semOf(d),w=ji(d.jpw)||5;
+ const ctx=`Data guru: sekolah=${d.sekolah}; tahun pelajaran=${d.tahun}; kelas/semester=${d.kelas}; mata pelajaran=${d.mapel||'(simpulkan dari materi/CP)'}; materi utama=${d.materi||'-'}; capaian pembelajaran=${d.cp}; JP per minggu=${w}; semester berjalan=${s===1?'Ganjil':'Genap'}; daftar bab/materi dari guru=${d.daftar?d.daftar.replace(/\n+/g,' | '):'(kosong, susun sendiri sesuai CP dan Kurikulum Merdeka)'}.`;
+ return `${ctx}\nTulis dalam Bahasa Indonesia untuk Kurikulum Merdeka, sesuai fase dan kelas. Balas HANYA JSON valid tanpa markdown.\nBuat dasar Silabus, Prota, dan Promes satu tahun pelajaran dengan skema:\n{"mapel":"nama lengkap mata pelajaran","fase":"huruf fase, mis. B","unit":[{"semester":1,"materi":"judul bab/lingkup materi","tp":["2-3 tujuan pembelajaran ringkas berawalan kata kerja operasional"],"jp":10,"kegiatan":"ringkasan kegiatan pembelajaran 2-3 kalimat","asesmen":"jenis asesmen","sumber":"sumber belajar"}]}\nAturan: susun 4-7 unit untuk semester 1 dan 4-7 unit untuk semester 2, berurutan sesuai alur belajar. Jika guru memberi daftar bab, pakai daftar itu. jp bilangan bulat; total JP tiap semester mendekati ${w*18}. Isi kegiatan, asesmen, dan sumber HANYA untuk unit semester ${s}; untuk semester lain isi string kosong.`}
+function buildSilabus(d,P){const s=semOf(d),U=pnorm(P).filter(u=>u.semester===s),tot=U.reduce((a,u)=>a+u.jp,0);
+ const rows=U.map((u,i)=>`<tr><td>${i+1}</td><td>${L(u.tp)}</td><td>${E(u.materi)}</td><td>${E(u.kegiatan)}</td><td>${E(u.asesmen)}</td><td>${u.jp} JP</td><td>${E(u.sumber)}</td></tr>`).join('');
+ return headP(d,P,'SILABUS',1)+`<p><b>Capaian Pembelajaran:</b> ${E(d.cp)}</p><table><tr><th>No</th><th>Tujuan Pembelajaran</th><th>Materi Pokok</th><th>Kegiatan Pembelajaran</th><th>Asesmen</th><th>Alokasi Waktu</th><th>Sumber Belajar</th></tr>${rows}<tr><td colspan="5"><b>Jumlah</b></td><td colspan="2"><b>${tot} JP</b></td></tr></table>`+sigh(d)}
+function buildProta(d,P){const U=pnorm(P);let body='',all=0;
+ [1,2].forEach(s=>{const us=U.filter(u=>u.semester===s);if(!us.length)return;let t=0;
+  body+=`<tr><td colspan="4" bgcolor="#E6E6E6" style="background:#e6e6e6"><b>SEMESTER ${SEMN(s).toUpperCase()}</b></td></tr>`;
+  us.forEach((u,i)=>{t+=u.jp;body+=`<tr><td>${i+1}</td><td>${E(u.materi)}</td><td>${L(u.tp)}</td><td>${u.jp}</td></tr>`});
+  body+=`<tr><td colspan="3"><b>Jumlah JP Semester ${s===1?'I':'II'}</b></td><td><b>${t}</b></td></tr>`;all+=t});
+ return headP(d,P,'PROGRAM TAHUNAN (PROTA)',0)+`<table><tr><th style="width:6%">No</th><th style="width:30%">Materi / Lingkup Materi</th><th>Tujuan Pembelajaran</th><th style="width:14%">Alokasi Waktu (JP)</th></tr>${body}<tr><td colspan="3"><b>JUMLAH JP SETAHUN</b></td><td><b>${all}</b></td></tr></table>`+sigh(d)}
+function buildPromes(d,P){const s=semOf(d),U=pnorm(P).filter(u=>u.semester===s),w=Math.max(1,ji(d.jpw)||5);
+ const RES=s===1?{1:'M',12:'PTS',21:'PAS',22:'R',23:'L',24:'L'}:{12:'PTS',21:'PAS',22:'R',23:'L',24:'L'};
+ const free=[];for(let i=1;i<=24;i++)if(!RES[i])free.push(i);
+ const M=s===1?['Juli','Agustus','September','Oktober','November','Desember']:['Januari','Februari','Maret','April','Mei','Juni'];
+ const BL='bgcolor="#6FA8DC" style="background:#6FA8DC"',GR='bgcolor="#D9D9D9" style="background:#D9D9D9"';
+ let idx=0,tot=0;
+ const rows=U.map((u,i)=>{const n=Math.max(1,Math.ceil(u.jp/w)),ws=free.slice(idx,idx+n);idx+=n;tot+=u.jp;
+  const c=Array.from({length:24},(_,k)=>{const x=k+1;return ws.includes(x)?`<td ${BL}>&nbsp;</td>`:(RES[x]?`<td ${GR}>&nbsp;</td>`:'<td>&nbsp;</td>')}).join('');
+  return `<tr><td>${i+1}</td><td class="l" style="text-align:left">${E(u.materi)}</td><td>${u.jp}</td>${c}<td>${ws.length?'Minggu '+ws[0]+(ws.length>1?'-'+ws[ws.length-1]:''):'Sesuaikan'}</td></tr>`}).join('');
+ const kg=Array.from({length:24},(_,k)=>`<td ${GR}>${RES[k+1]||''}</td>`).join('');
+ const head=`<tr><th rowspan="2">No</th><th rowspan="2">Materi / Lingkup Materi</th><th rowspan="2">JP</th>${M.map(m=>`<th colspan="4">${m}</th>`).join('')}<th rowspan="2">Ket.</th></tr><tr>${M.map(()=>'<th>1</th><th>2</th><th>3</th><th>4</th>').join('')}</tr>`;
+ return headP(d,P,'PROGRAM SEMESTER (PROMES)',1)+`<div class="pmw" style="font-size:8pt"><table width="100%" style="table-layout:fixed"><colgroup><col style="width:3%"><col style="width:22%"><col style="width:3%">${'<col style="width:2.6%">'.repeat(24)}<col style="width:9%"></colgroup>${head}${rows}<tr><td colspan="2" style="text-align:left"><b>Kegiatan sekolah</b></td><td></td>${kg}<td></td></tr><tr><td colspan="2" style="text-align:left"><b>Jumlah</b></td><td><b>${tot}</b></td><td colspan="25"></td></tr></table></div><p style="font-size:9pt">Keterangan: kotak biru = minggu pembelajaran; M = minggu awal tahun ajaran; PTS = penilaian tengah semester; PAS = penilaian akhir semester; R = remedial/rapor; L = libur. Minggu efektif: ${free.length} minggu (${free.length*w} JP tersedia). Sesuaikan dengan kalender pendidikan sekolah.</p>`+sigh(d)}
+const JSZ='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',H2P='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+const loaded={};
+function lib(u){return loaded[u]||(loaded[u]=new Promise((ok,no)=>{const t=document.createElement('script');t.src=u;t.onload=ok;t.onerror=()=>{delete loaded[u];no(new Error('lib'))};document.head.appendChild(t)}))}
+const slug=()=>(LABELS[cur]||'Perangkat')+'-'+((D&&(D.materi||D.mapel))||'').replace(/[^A-Za-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const wordHtml=()=>'<html><head><meta charset="utf-8"><style>body{font-family:"Times New Roman",serif;font-size:12pt}h2{font-size:14pt}h3{font-size:12pt}th{background:#e6e6e6}td,th{vertical-align:top}.w{height:60px}.pb{page-break-before:always}.pmw{font-size:8pt}.cover{text-align:center}.ttl{text-align:center;font-weight:bold}.dm{margin-left:20px}td.y{background:#FFFF00;font-weight:bold}td.r{background:#FF0000;color:#FFFFFF;font-weight:bold}</style></head><body>'+html.replace(/<table>/g,'<table border="1" cellspacing="0" cellpadding="5" width="100%" style="border-collapse:collapse">')+'</body></html>';
+async function makeWord(){
+ await lib(JSZ);const z=new JSZip(),R='http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+ z.file('[Content_Types].xml','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="html" ContentType="text/html"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>');
+ z.file('_rels/.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="'+R+'/officeDocument" Target="word/document.xml"/></Relationships>');
+ z.file('word/document.xml','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="'+R+'"><w:body><w:altChunk r:id="rId1"/><w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="720" w:footer="720" w:gutter="0"/></w:sectPr></w:body></w:document>');
+ z.file('word/_rels/document.xml.rels','<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="'+R+'/aFChunk" Target="afchunk.html"/></Relationships>');
+ z.file('word/afchunk.html',wordHtml());
+ return z.generateAsync({type:'blob',mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+}
+async function makePdf(){
+ await lib(H2P);const w=document.createElement('div');w.style.cssText='position:fixed;left:-99999px;top:0;width:718px;background:#fff';
+ const c=$('doc').cloneNode(true);c.removeAttribute('id');c.style.cssText='border:0;padding:0;overflow:visible';w.appendChild(c);document.body.appendChild(w);
+ try{return await html2pdf().set({margin:[12,12,12,12],image:{type:'jpeg',quality:.95},html2canvas:{scale:2,useCORS:true},jsPDF:{unit:'mm',format:'a4'},pagebreak:{mode:['css','legacy'],before:'.lamp',avoid:['tr','h3']}}).from(c).outputPdf('blob')}
+ finally{w.remove()}
+}
+async function saveAs(kind,btn){
+ const m=$('msg'),t=btn.textContent;m.className='msg';
+ const dl={save:async({filename,data})=>{const b=data instanceof Blob?data:new Blob([data],{type:'text/html'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000)}};
+ btn.disabled=true;btn.textContent='Menyiapkan...';
+ try{
+  const data=kind==='pdf'?await makePdf():kind==='docx'?await makeWord():'<!DOCTYPE html><html lang="id"><meta charset="utf-8"><title>Modul Ajar</title><body style="font:12pt/1.5 Times New Roman,serif;max-width:800px;margin:auto">'+html+'</body></html>';
+  await dl.save({filename:slug()+'.'+kind,data});m.textContent='';
+ }catch(e){if(!e||e.code!=='declined'){m.className='msg e';m.textContent=e&&e.message==='lib'?'Gagal memuat pustaka pembuat file. Periksa koneksi internet lalu coba lagi.':'Gagal membuat file '+kind.toUpperCase()+'. Coba lagi.'}}
+ btn.disabled=false;btn.textContent=t;
+}
+function show(){
+ const ks=Object.keys(docs);if(!ks.includes(cur))cur=ks[0];html=docs[cur]||'';
+ $('out').innerHTML=(ks.length>1?`<div class="tools">${ks.map(k=>`<button type="button" class="tab" data-k="${k}" aria-pressed="${k===cur}">${LABELS[k]}</button>`).join('')}</div>`:'')+`<div class="tools"><button type="button" id="b4">Unduh PDF</button><button type="button" id="b5">Unduh Word</button><button type="button" id="b3">Unduh HTML</button><button type="button" id="b1">Salin teks</button><button type="button" id="b2">Cetak</button></div><article class="doc" id="doc">${html}</article>`;
+ document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{cur=b.dataset.k;show()});
+ $('b1').onclick=async()=>{try{await navigator.clipboard.writeText($('doc').innerText);$('b1').textContent='Tersalin'}catch(e){$('b1').textContent='Gagal menyalin'}setTimeout(()=>$('b1').textContent='Salin teks',2000)};
+ $('b2').onclick=()=>{try{window.print()}catch(e){}};
+ $('b3').onclick=e=>saveAs('html',e.currentTarget);$('b4').onclick=e=>saveAs('pdf',e.currentTarget);$('b5').onclick=e=>saveAs('docx',e.currentTarget);
+}
+$('f').onsubmit=async e=>{
+ e.preventDefault();const d={};['sekolah','tahun','kelas','penyusun','nip','mapel','materi','cp','jpw','daftar'].forEach(k=>d[k]=$(k).value.trim());
+ d.jenis=['modul','silabus','prota','promes'].filter(k=>$('j_'+k).checked);
+ const m=$('msg'),g=$('go'),bad=t=>{m.className='msg e';m.textContent=t};m.className='msg';m.textContent='';
+ if(!d.jenis.length)return bad('Pilih minimal satu perangkat yang akan dibuat.');
+ if(d.jenis.includes('modul')&&!d.materi)return bad('Isi kolom Materi untuk membuat Modul Ajar.');
+ g.disabled=true;g.textContent='Sedang menyusun...';m.textContent='Menyusun perangkat ajar, mohon tunggu sekitar satu menit.';
+ const wt=()=>{m.textContent='Batas kuota AI sedang penuh, menunggu 40 detik lalu mencoba lagi otomatis...'};
+ const Q=/\b429\b|quota|RESOURCE_EXHAUSTED/i,QM='Kuota AI habis (error 429). Tunggu 1-2 menit lalu klik Generate lagi. Jika terus berulang, kuota harian paket gratis Firebase sudah terpakai: tunggu besok atau upgrade ke paket Blaze.';
+ try{
+  const jobs=[],ext=d.jenis.filter(k=>k!=='modul');
+  if(d.jenis.includes('modul'))jobs.push((async()=>{const [pa,pb]=prompts(d);const [A,B]=await Promise.all([ai(pa,wt),ai(pb,wt)]);return {modul:build(d,A,B)}})());
+  if(ext.length)jobs.push((async()=>{const P=await ai(promptC(d),wt),o={};if(ext.includes('silabus'))o.silabus=buildSilabus(d,P);if(ext.includes('prota'))o.prota=buildProta(d,P);if(ext.includes('promes'))o.promes=buildPromes(d,P);return o})());
+  const res=await Promise.allSettled(jobs),nd={};let err=null;
+  res.forEach(r=>{if(r.status==='fulfilled')Object.assign(nd,r.value);else err=err||r.reason});
+  if(!Object.keys(nd).length)throw err;
+  docs={};['modul','silabus','prota','promes'].forEach(k=>{if(nd[k])docs[k]=nd[k]});cur='';D=d;show();
+  const em=err?String((err&&err.message)||''):'';
+  const part=err?(' Sebagian gagal dibuat ('+(Q.test(em)?'kuota AI habis':em.slice(0,120))+'); klik Generate lagi untuk yang gagal.'):'';
+  m.textContent='Selesai. Periksa kembali isi sebelum dipakai.'+part;
+  try{await saveHist(d,docs);m.textContent='Selesai dan tersimpan di riwayat. Periksa kembali isi sebelum dipakai.'+part}catch(e2){m.textContent='Selesai, tetapi belum tersimpan ke riwayat (periksa aturan Firestore).'+part}
+ }catch(x){const em=String((x&&x.message)||'');bad(Q.test(em)?QM:'Gagal menyusun perangkat ('+((x&&x.code)||'error')+'): '+em.slice(0,320)+' Klik Generate untuk mencoba lagi.')}
+ g.disabled=false;g.textContent='Generate perangkat ajar';
+};
+</script>
+</body>
+</html>
